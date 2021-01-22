@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head >
+        <meta charset="utf-8">
+        <script src="atividade aula02.js"></script>
+        <title>Seleção de elementos com Javascript</title>
+        <script>
+
+          function mudaBgColor()
+			{
+			    document.bgColor = "lighblue";
+            }
+            function mudaTitle()
+			{
+			    document.title = "Este título foi mudado. ";
+            }
+         
+            function getAttribute()
+            {
+                alert(document.("lang"))
+            }
+        </script>
+    </head>
+    <body>
+        <!-- <script>
+            var n1 = Number.parseInt(window.prompt('Digite o primeiro valor:  '));
+            var n2 = Number.parseInt(window.prompt('Digite o segundo valor: '));
+            soma = (n1+n2);
+            subtração = (n1-n2);
+            multiplicação = (n1*n2);
+            divisão = (n1/n2);
+            document.write('Soma = ',soma);
+            document.write(' Subtração = ',subtração);
+            document.write(' Multiplicação = ',multiplicação);
+            document.write(' Divisão = ',divisão);
+        </script> -->
+        
+     <!--   <input type=button name="abre_janela" value="Abre Janela" onClick="abreJanela()">&nbsp; 
+            Clique e veja a função. -->
+
+<!--<script>
+    var meuArray = [1,'dois',3,'4']
+    alert(meuArray[0])
+    alert(meuArray[0]+meuArray[1])
+    alert(meuArray[2]+meuArray[3])
+    alert(meuArray[2]-meuArray[0])
+</script>-->
+
+<!--<script>function alertOnFocus()
+    {
+        alert("Você clicou no radiobutton");
+
+        document.forms[0].myradio.blur();
+    }
+    </script>
+    <form name="formEx" method="post" action="">
+        <fieldset>
+            <input type="radio" name="myradio" value="male" onclick="alertOnFocus()" )>Male
+            <input type="radio" name="myradio" value="Female" onclick="alertOnFocus()">Female
+            <input type="radio" name="myradio" value="Other" onclick="alertOnFocus()">Other
+</fieldset>
+</form> -->
+
+<!--<script>function abreJanela()
+    {
+        var parameters = "height=400px,width=350px";
+        newWindow = open("teste.html", "newDocument", parameters);
+    }
+</script>
+<input type=button name="abre_janela" value="Abre Janela" onClick="abreJanela()">&nbsp; 
+            Clique aqui para ver a operação. -->
+
+        <input type=button name="muda_bg_color" value="Muda BG Color" onClick="mudaBgColor()">&nbsp; 
+        Clique aqui para mudar a cor de fundo deste documento
+        <input type=button name="muda_title" value="Muda Title" onClick="mudaTitle()">&nbsp; 
+            Clique aqui para mudar o título na guia da Janela
+            <input type=button name="verificarlang" value="verificarlang" onClick="getAttribute(lang)">&nbsp; 
+            Clique aqui para mudar o título na guia da Janela
+    </form>
+    </body>
+</html>

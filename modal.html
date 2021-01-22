@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <tittle>Exemplo</tittle>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+
+  </head>
+  <body>
+    <script>
+      $(function(){
+  $("#criar-modal").click(function(){
+    $("#modal-alerta").modal();
+  });
+});
+    </script>
+    <button class="btn btn-primary" id="criar-modal">Acionar Modal</button>
+    <div class="modal" id="modal-alerta">
+    <div class="modal-dialog">
+    <div class="modal-content">
+    <!-- Cabeçalho do Modal -->
+    <div class="modal-header">
+      <h2>Apresentando Modal</h2>
+    </div>
+    <!-- Corpo do Modal -->
+    <div class="modal-body">
+      <p>Mostrando Modal em BootStrap</p>
+    </div>
+    <!-- Rodapé do Modal -->
+    <div class="modal-footer">
+      <button class="btn btn-danger" data-dismiss="modal">Fechar Modal</button>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="modal" id="modal-alerta">
+      <div class="modal-dialog">
+        <div class="modal-content">
+    
+          <!-- Cabeçalho do Modal -->
+          <div class="modal-header">
+            <h2>Apresentando Modal</h2>
+          </div>
+    
+          <!-- Corpo do Modal -->
+          <div class="modal-body">
+            <p>Mostrando Modal em BootStrap</p>
+          </div>
+    
+          <!-- Rodapé do Modal -->
+          <div class="modal-footer">
+            <button class="btn btn-danger" data-dismiss="modal">Fechar Modal</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

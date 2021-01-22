@@ -1,0 +1,298 @@
+<!--<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>BOM e DOM</title>
+    </head>
+    <body>
+    	<script>
+    	  //window.open('http://www.globo.com');
+    	  //alert(location.href);
+          location.reload();
+        </script>
+    </body>
+</html> 
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <title> 
+      Abre e Fecha Janelas - Métodos 
+    </title> 
+    <script> 
+        var Window; 
+  
+        // Function that open the new Window 
+        function windowOpen() { 
+            Window = window.open( 
+              "https://www.uol.com.br/", 
+                "_blank", "width=400, height=450"); 
+        } 
+  
+        // function that Closes the open Window 
+        function windowClose() { 
+            Window.close(); 
+        } 
+    </script> 
+</head> 
+  
+<body> 
+    <button onclick="windowOpen()"> 
+      Abrir URL 
+    </button> 
+    <button onclick="windowClose()"> 
+      Fechar página 
+    </button> 
+</body> 
+  
+</html> -->
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>BOM e DOM</title>
+        <script>
+    	  var newWindow;
+
+          //Funções para exemplos do objeto Window (BOM)
+
+			function mudaStatus()
+			{
+			    window.status = "Oi, Pessoal!";
+			}
+
+			function mostraLocalizacao()
+			{
+			    alert(window.location); 
+			}
+
+			function mostraAlerta()
+			{
+			    alert("Oi, Estou aqui!"); 
+			}
+
+			function pedeConfirmacao()
+			{
+			    var response = confirm("Delete Arquivo?");
+			    alert(response); 
+			}
+
+			function mostraPrompt()
+			{
+			    var fileName = prompt("Selecione o arquivo", "arquivo.txt");
+			    alert(fileName);
+			}
+
+			function abreJanela()
+			{
+			    var parameters = "height=200,width=200";
+			    newWindow = open("teste.html", "newDocument", parameters);
+			}
+
+			function fechaJanela()
+			{
+			    newWindow.close();
+			}
+
+		//Funções para exemplos do objeto Document (DOM)
+
+			function mudaBgColor()
+			{
+			    document.bgColor = "lightgreen";
+			}
+
+			function restauraBgColor()
+			{
+			    document.bgColor = "white";
+			}
+
+			function mudaFgColor()
+			{
+			    document.fgColor = "blue";
+			}
+
+			function restauraFgColor()
+			{
+			    document.fgColor = "black";
+			}
+
+			function mudaTitle()
+			{
+			    document.title = "Este título foi mudado. ";
+			}
+
+			function escrevernoDocumento()
+			{
+			    document.write("<h1>Hello</h1>");
+			    document.write("<p>Bem vindo a nova página</p>");
+			    document.write("<p>Para retornar ao arquivo anterior, ");
+			    document.write("<a href='Código Aula 14_Javascript.html' target=_top>Clique aqui</a></p>");
+			}
+
+			//Functions for Form object examples
+
+				function getFormName()
+				{
+				    alert(document.forms[0].name);
+				}
+
+				function pegaFormMethod()
+				{
+				    alert(document.forms[0].method);
+				}
+
+				function pegaFormAction()
+				{
+				    alert(document.forms[0].action);
+				}
+
+				function pegaFormTamanho()
+				{
+				    alert(document.forms[0].length);
+				}
+
+				function getElementName()
+				{
+				    alert(document.forms[0].elements[1].name);
+				}
+
+				function getTboxValue()
+				{
+				    alert(document.forms[0].textBox1.value);
+				}
+
+				function alertOnFocus()
+				{
+				    alert("Você clicou na caixa");
+
+				    //hack to overcome bug in some versions of NN
+				    document.forms[0].textBox2.blur();
+				}
+
+				function alertOnBlur()
+				{
+				    alert("Você clicou fora da caixa");
+				}
+
+				function mudaLabel()
+				{
+				    document.forms[0].button1.value = "Novo valor, novo label";
+				}
+
+				function mostraCheckboxStatus()
+				{
+				    if (document.forms[0].checkbox1.checked == true)
+				    {
+				        alert("Marcado");
+				    }
+				    else
+				    {
+				        alert("Não Marcado");
+				    };
+				}
+
+				function digaHello()
+				{
+				    alert("Oiii pra você também!");
+				}
+
+				function getSelectedIndex()
+				{
+				    alert(document.forms[0].selectBox1.selectedIndex);
+				}
+
+        </script>
+    </head>
+    <body>
+    	<!-- Funções para exemplos do objeto Window -->
+    	<input type=button name="change_status" value="Muda Status" onClick="mudaStatus()">&nbsp; 
+            Clique aqui para ver a operação.
+       <br><br>
+       <input type=button name="Mostra_location" value="Mostra Localizacao" onClick="mostraLocalizacao()">&nbsp; 
+            Clique aqui para ver sua localização.
+       <br><br>
+       <input type=button name="mostra_alerta" 
+            value="Mostra Alerta" onClick="mostraAlerta()">&nbsp; 
+            Clique aqui para ver a operação.
+       <br><br>
+       <input type=button name="pede_confirmacao" value="Pede Confirmação" onClick="pedeConfirmacao()"> 
+            Clique aqui para ver a operação.
+       <br><br>
+       <input type=button name="mostra_prompt" value="Mostra Prompt" onClick="mostraPrompt()">&nbsp; 
+            Clique aqui para ver a operação.
+	   <br><br>
+       <input type=button name="abre_janela" value="Abre Janela" onClick="abreJanela()">&nbsp; 
+            Clique aqui para ver a operação.
+	   <br><br>
+       <input type=button name="fecha_janela" value="Fecha Janela" onClick="fechaJanela()">&nbsp; 
+            Clique aqui para ver a operação.
+
+       <!-- Funções para exemplos do objeto Window -->
+       <br><br>
+       <input type=button name="muda_bg_color" value="Muda BG Color" onClick="mudaBgColor()">&nbsp; 
+          	Clique aqui para mudar a cor de fundo deste documento
+       <br><br>
+       <input type=button name="restaura_bg_color" value="Restaura BG Color" onClick="restauraBgColor()">&nbsp; 
+            Clique aqui para restaurar a cor de fundo de novo
+       <br><br>
+       <input type=button name="muda_fg_color" value="Muda FG Color" onClick="mudaFgColor()">&nbsp; 
+            Clique aqui para mudar a cor da letra do documento.
+       <br><br>
+       <input type=button name="restaura_fg_color" value="Restaura FG Color" onClick="restauraFgColor()">&nbsp; 
+            Clique aqui para restaurar o foreground
+       <br><br>
+       <input type=button name="muda_title" value="Muda Title" onClick="mudaTitle()">&nbsp; 
+            Clique aqui para mudar o título na guia da Janela
+       <br><br>
+       <input type=button name="write_to_document" value="Escrever no documento" onClick="escrevernoDocumento()">&nbsp; 
+            Clique aqui para ver o que acontece.
+
+
+       <br><br>
+       <form name="formExemplo" method="post" action="mailto:helder@gmail.com">
+       		<fieldset>
+			    <legend>Formulário de Exemplo</legend>
+			    <label>Tem um formulário aqui!</label>
+			    <br><br>
+			    <input type=button name="get_element_name" value="Primeiro Botão"> 
+			    <br><br>
+			    <input type=text name="textBox1" value="Value do TextBox">
+			    <br><br>
+			    <input type=text name="textBox2" value="textBox2" onFocus="alertOnFocus()">
+			    <br><br>
+			    <input type=text name="textBox3" value="textBox3" onBlur="alertOnBlur()">
+			  	<br><br>
+			  	<input type=button name="button1" value="valor Original, label original ">
+			  	<br><br>
+			  	<input type=checkbox name="checkbox1" value="checkbox 1">
+			  	<br><br>
+			  	<select name="selectBox1">
+		            <Option>Uma coisa ou outra</option>
+		            <Option>Algo mais</option>
+		            <Option>Algo completamente diferente</option>
+		        </select>
+			</fieldset>
+       </form>
+       <br><br>
+	   <input type="button" name="pegar_form_name" value="Pegar Form Nome" onClick="getFormName()">&nbsp;
+       <br><br>
+	   <input type="button" name="pegar_form_method" value="Pegar Form Metodo" onClick="pegaFormMethod()">&nbsp;
+	   <br><br>
+	   <input type="button" name="pegar_form_action" value="Pegar Form Action" onClick="pegaFormAction()">&nbsp;
+	   <br><br>
+	   <input type="button" name="pegar_form_tamanho" value="Pegar Tamanho Form" onClick="pegaFormTamanho()">&nbsp;
+	   <br><br>
+	   <input type="button" name="pegar_nome_elemento" value="Pegar Nome Elemento" onClick="getElementName()">&nbsp;
+	   Clique aqui para ver o que acontece.
+	   <br><br>
+	   <input type="button" name="pegar_textBox" value="Pegar textBox1 Elemento" onClick="getTboxValue()">&nbsp;
+	   <br><br>
+	   <input type=button name="muda_label" value="Muda Label" onClick="mudaLabel()">&nbsp;
+	   <br><br>
+	   <input type=button name="mostra_checkbox_status" value="Mostra Checkbox Status" onClick="mostraCheckboxStatus()">
+	   <br><br>
+	   <input type=button name="button2" value="Hello" onClick="digaHello()">
+	   <br><br>
+	   <input type=button name="get_selection" value="Selecione!" onClick="getSelectedIndex()">&nbsp;
+    </body>
+</html> 
