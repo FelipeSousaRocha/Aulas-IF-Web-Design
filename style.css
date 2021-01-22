@@ -1,0 +1,13 @@
+#form{
+    border: solid 2px;
+    padding: 5px;
+}
+#pf{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+form{
+    background-color: lightbalue;
+}
+body{
+    background-color: darkcyan;
+}
